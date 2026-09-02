@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spDevices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quét" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kết nối" />
+        <Button
+            android:id="@+id/btnDisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngắt" />
+        <TextView
+            android:id="@+id/lbStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:text="Chưa kết nối"
+            android:textColor="#D00000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbPing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PING" />
+        <RadioButton
+            android:id="@+id/rbAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="AT Command" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/layoutPing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/etTarget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="SĐT 10 số, bắt đầu 0"
+            android:inputType="phone" />
+        <Button
+            android:id="@+id/btnPing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PING SMS" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <EditText
+            android:id="@+id/etAt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Lệnh AT"
+            android:inputType="textNoSuggestions" />
+        <CheckBox
+            android:id="@+id/cbCr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CR" />
+        <Button
+            android:id="@+id/btnSendAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gửi" />
+        <Button
+            android:id="@+id/btnCtrlZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="^Z" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kiểm tra TK" />
+        <Button
+            android:id="@+id/btnSignal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sóng" />
+        <Button
+            android:id="@+id/btnClr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xóa" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:text="RAW CODE:"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvRaw"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#111111"
+        android:fontFamily="monospace"
+        android:padding="6dp"
+        android:scrollbars="vertical"
+        android:textColor="#33FF66"
+        android:textSize="11sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:text="KẾT QUẢ (mới nhất ở trên):"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvDecode"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F2F2F2"
+        android:fontFamily="monospace"
+        android:padding="6dp"
+        android:scrollbars="vertical"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+</LinearLayout>
